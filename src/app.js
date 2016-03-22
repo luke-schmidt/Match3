@@ -83,9 +83,13 @@ window.onload = function() {
     var gameover = false;
     
     // Gui buttons
-    var buttons = [ { x: 30, y: 240, width: 150, height: 50, text: "New Game"},
-                    { x: 30, y: 300, width: 150, height: 50, text: "Show Moves"},
-                    { x: 30, y: 360, width: 150, height: 50, text: "Enable AI Bot"}];
+    var buttons = [ { x: 30, y: 200, width: 150, height: 50, text: "New Game"},
+                    { x: 30, y: 260, width: 150, height: 50, text: "Show Moves"},
+                    { x: 30, y: 320, width: 150, height: 50, text: "Enable AI Bot"},
+                    { x: 30, y: 380, width: 150, height: 50, text: "Easy"},
+                    { x: 30, y: 440, width: 150, height: 50, text: "Medium"},
+                    { x: 30, y: 500, width: 150, height: 50, text: "Hard"},
+                  ];
     
     // Initialize the game
     function init() {
