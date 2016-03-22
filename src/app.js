@@ -37,8 +37,8 @@ window.onload = function() {
     var level = {
         x: 250,         // X position
         y: 113,         // Y position
-        columns: 8,     // Number of tile columns
-        rows: 8,        // Number of tile rows
+        columns: 10,     // Number of tile columns
+        rows: 10,        // Number of tile rows
         tilewidth: 40,  // Visual width of a tile
         tileheight: 40, // Visual height of a tile
         tiles: [],      // The two-dimensional tile array
