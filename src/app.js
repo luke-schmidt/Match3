@@ -30,6 +30,8 @@ window.onload = function() {
     var framecount = 0;
     var fps = 0;
     
+    //difficulty
+    var difficulty = 5;
     // Mouse dragging
     var drag = false;
     
@@ -505,7 +507,7 @@ window.onload = function() {
     
     // Get a random tile
     function getRandomTile() {
-        return Math.floor(Math.random() * tilecolors.length);
+        return Math.floor(Math.random() * difficulty);
     }
     
     // Remove clusters and insert tiles
@@ -844,8 +846,20 @@ window.onload = function() {
                     aibot = !aibot;
                     buttons[i].text = (aibot?"Disable":"Enable") + " AI Bot";
                 }
+                //Change Difficulty to easy
+                else if (i == 3) {
+                    difficulty = 4;
+                    newGame();
             }
+                //Change difficulty to medium
+                else if (i == 4) {
+                    difficulty = 5;
+                    newGame();
         }
+                //Change difficulty to hard
+                else if (i == 5) {
+                    difficulty = 6;
+                    newGame();
     }
     
     function onMouseUp(e) {
