@@ -31,7 +31,7 @@ window.onload = function() {
     var fps = 0;
     
     //difficulty
-    var difficulty = 5;
+    var difficulty = 4;
     // Mouse dragging
     var drag = false;
     
@@ -855,7 +855,7 @@ window.onload = function() {
                     aibot = !aibot;
                     buttons[i].text = (aibot?"Disable":"Enable") + " AI Bot";
                 }
-                //Change Difficulty to easy
+                //Change difficulty to easy
                 else if (i == 3) {
                     difficulty = 4;
                     newGame();
