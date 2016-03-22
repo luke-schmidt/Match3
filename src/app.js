@@ -56,6 +56,15 @@ window.onload = function() {
                       [128, 255, 255],
                       [255, 255, 255]];
     
+    // The emogis are added into an array
+    var emogis = [["/Images/blue"],
+                    ["/Images/brown"],
+                    ["/Images/gray"],
+                    ["/Images/green"],
+                    ["/Images/orange"],
+                    ["/Images/pink"],
+                    ["/Images/turquoise"]];
+    
     // Clusters and moves that were found
     var clusters = [];  // { column, row, length, horizontal }
     var moves = [];     // { column1, row1, column2, row2 }
