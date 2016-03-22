@@ -1,0 +1,3 @@
+#ignore intel xdk files
+*.xdk
+*.xdke
