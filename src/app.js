@@ -31,7 +31,7 @@ window.onload = function() {
     var fps = 0;
     
     //difficulty
-    var difficulty = 4;
+    var difficulty = 5;
     // Mouse dragging
     var drag = false;
     
@@ -57,13 +57,13 @@ window.onload = function() {
                       [255, 255, 255]];
     
     // The emogis are added into an array
-    var emogis = [["/Images/blue"],
-                    ["/Images/brown"],
-                    ["/Images/gray"],
-                    ["/Images/green"],
-                    ["/Images/orange"],
-                    ["/Images/pink"],
-                    ["/Images/turquoise"]];
+    var emogis = ["/Images/blue.png",
+                    "/Images/brown.png",
+                    "/Images/gray.png",
+                    "/Images/green.png",
+                    "/Images/orange.png",
+                    "/Images/pink.png",
+                    "/Images/turquoise.png"];
     
     // Clusters and moves that were found
     var clusters = [];  // { column, row, length, horizontal }
@@ -115,7 +115,7 @@ window.onload = function() {
             level.tiles[i] = [];
             for (var j=0; j<level.rows; j++) {
                 // Define a tile type and a shift parameter for animation
-                level.tiles[i][j] = { type: 0, shift:0 }
+                level.tiles[i][j] = { type: 0, shift:0 };
             }
         }
         
@@ -176,7 +176,7 @@ window.onload = function() {
             // Game is busy resolving and animating clusters
             animationtime += dt;
             
-            if (animationstate == 0) {
+            if (animationstate === 0) {
                 // Clusters need to be found and removed
                 if (animationtime > animationtimetotal) {
                     // Find clusters
@@ -186,7 +186,7 @@ window.onload = function() {
                         // Add points to the score
                         for (var i=0; i<clusters.length; i++) {
                             // Add extra points for longer clusters
-                            score += 100 * (clusters[i].length - 2);;
+                            score += 100 * (clusters[i].length - 2);
                         }
                     
                         // Clusters found, remove them
@@ -541,7 +541,7 @@ window.onload = function() {
     // Find clusters in the level
     function findClusters() {
         // Reset clusters
-        clusters = []
+        clusters = [];
         
         // Find horizontal clusters
         for (var j=0; j<level.rows; j++) {
@@ -617,7 +617,7 @@ window.onload = function() {
     // Find available moves
     function findMoves() {
         // Reset moves
-        moves = []
+        moves = [];
         
         // Check horizontal swaps
         for (var j=0; j<level.rows; j++) {
@@ -652,7 +652,7 @@ window.onload = function() {
         }
         
         // Reset clusters
-        clusters = []
+        clusters = [];
     }
     
     // Loop over the cluster tiles and execute a function
@@ -709,7 +709,7 @@ window.onload = function() {
                     // Swap tile to shift it
                     var shift = level.tiles[i][j].shift;
                     if (shift > 0) {
-                        swap(i, j, i, j+shift)
+                        swap(i, j, i, j+shift);
                     }
                 }
                 
@@ -843,7 +843,7 @@ window.onload = function() {
                 pos.y >= buttons[i].y && pos.y < buttons[i].y+buttons[i].height) {
                 
                 // Button i was clicked
-                if (i == 0) {
+                if (i === 0) {
                     // New Game
                     newGame();
                 } else if (i == 1) {
@@ -857,18 +857,21 @@ window.onload = function() {
                 }
                 //Change difficulty to easy
                 else if (i == 3) {
-                    difficulty = 4;
-                    newGame();
-            }
-                //Change difficulty to medium
-                else if (i == 4) {
                     difficulty = 5;
                     newGame();
-        }
-                //Change difficulty to hard
-                else if (i == 5) {
+                }
+                //Change difficulty to medium
+                else if (i == 4) {
                     difficulty = 6;
                     newGame();
+                }
+                //Change difficulty to hard
+                else if (i == 5) {
+                    difficulty = 7;
+                    newGame();
+                }
+            }
+        }
     }
     
     function onMouseUp(e) {
