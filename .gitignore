@@ -2,4 +2,5 @@
 *.xdk
 *.xdke
 *.xdk_bak
+*.xdke_bak
 *.json
