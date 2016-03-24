@@ -1,5 +1,5 @@
 #ignore intel xdk files
 *.xdk
 *.xdke
-*.sdke_bak
+*.xdk_bak
 *.json
