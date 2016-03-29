@@ -48,13 +48,13 @@ window.onload = function() {
     };
     
     // All of the different tile colors in RGB
-    var tilecolors = [[255, 128, 128],
-                      [128, 255, 128],
-                      [128, 128, 255],
-                      [255, 255, 128],
-                      [255, 128, 255],
-                      [128, 255, 255],
-                      [255, 255, 255]];
+    var tilecolors = [[87, 60, 117], //blue emoji
+                      [93, 188, 210], //brown emoji
+                      [255, 255, 179], //gray emoji
+                      [224, 0, 96], //green emoji
+                      [90, 15, 9], //orange emoji
+                      [51, 255, 51], //pink emoji
+                      [248, 248, 248]]; //torquise emoji
     
     // The emogis are added into an array
     var emogis = ["/Images/blue.png",
@@ -285,7 +285,7 @@ window.onload = function() {
         drawFrame();
         
         // Draw score
-        context.fillStyle = "#000000";
+        context.fillStyle = "#d02884";
         context.font = "24px Verdana";
         drawCenterText("Score:", 30, level.y+40, 150);
         drawCenterText(score, 30, level.y+70, 150);
@@ -324,9 +324,9 @@ window.onload = function() {
     // Draw a frame with a border
     function drawFrame() {
         // Draw background and a border
-        context.fillStyle = "#d0d0d0";
+        context.fillStyle = "#f8f8f8";
         context.fillRect(0, 0, canvas.width, canvas.height);
-        context.fillStyle = "#e8eaec";
+        context.fillStyle = "#f8f8f8";
         context.fillRect(1, 1, canvas.width-2, canvas.height-2);
         
         // Draw header
@@ -348,11 +348,11 @@ window.onload = function() {
     function drawButtons() {
         for (var i=0; i<buttons.length; i++) {
             // Draw button shape
-            context.fillStyle = "#000000";
+            context.fillStyle = "#f8f8f8";
             context.fillRect(buttons[i].x, buttons[i].y, buttons[i].width, buttons[i].height);
             
             // Draw button text
-            context.fillStyle = "#ffffff";
+            context.fillStyle = "#33ff33";
             context.font = "18px Verdana";
             var textdim = context.measureText(buttons[i].text);
             context.fillText(buttons[i].text, buttons[i].x + (buttons[i].width-textdim.width)/2, buttons[i].y+30);
