@@ -48,11 +48,11 @@ window.onload = function() {
     };
     
     // All of the different tile colors in RGB
-    var tilecolors = [[87, 60, 117], //blue emoji
+    var tilecolors = [[255, 128, 0], //blue emoji
                       [93, 188, 210], //brown emoji
-                      [255, 255, 179], //gray emoji
+                      [255, 255, 51], //gray emoji
                       [224, 0, 96], //green emoji
-                      [90, 15, 9], //orange emoji
+                      [87, 60, 117], //orange emoji
                       [51, 255, 51], //pink emoji
                       [248, 248, 248]]; //torquise emoji
     
@@ -285,7 +285,7 @@ window.onload = function() {
         drawFrame();
         
         // Draw score
-        context.fillStyle = "#d02884";
+        context.fillStyle = "#5dbcd2";
         context.font = "24px Verdana";
         drawCenterText("Score:", 30, level.y+40, 150);
         drawCenterText(score, 30, level.y+70, 150);
@@ -352,7 +352,7 @@ window.onload = function() {
             context.fillRect(buttons[i].x, buttons[i].y, buttons[i].width, buttons[i].height);
             
             // Draw button text
-            context.fillStyle = "#33ff33";
+            context.fillStyle = "#e00060";
             context.font = "18px Verdana";
             var textdim = context.measureText(buttons[i].text);
             context.fillText(buttons[i].text, buttons[i].x + (buttons[i].width-textdim.width)/2, buttons[i].y+30);
