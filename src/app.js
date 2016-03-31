@@ -48,22 +48,14 @@ window.onload = function() {
     };
     
     // All of the different tile colors in RGB
-    var tilecolors = [[255, 128, 0], //blue emoji
-                      [93, 188, 210], //brown emoji
-                      [255, 255, 51], //gray emoji
-                      [224, 0, 96], //green emoji
-                      [87, 60, 117], //orange emoji
-                      [51, 255, 51], //pink emoji
-                      [248, 248, 248]]; //torquise emoji
+    var tilecolors = [[255, 128, 0], //blue
+                      [93, 188, 210], //brown
+                      [255, 255, 51], //gray
+                      [224, 0, 96], //green
+                      [87, 60, 117], //orange
+                      [51, 255, 51], //pink
+                      [248, 248, 248]]; //torquise
     
-    // The emogis are added into an array
-    var emogis = ["/Images/blue.png",
-                    "/Images/brown.png",
-                    "/Images/gray.png",
-                    "/Images/green.png",
-                    "/Images/orange.png",
-                    "/Images/pink.png",
-                    "/Images/turquoise.png"];
     
     // Clusters and moves that were found
     var clusters = [];  // { column, row, length, horizontal }
@@ -336,7 +328,7 @@ window.onload = function() {
         // Draw title
         context.fillStyle = "#ffffff";
         context.font = "24px Verdana";
-        context.fillText("Emoji Match", 10, 30);
+        context.fillText("Color Match", 10, 30);
         
         // Display fps
         context.fillStyle = "#ffffff";
@@ -376,6 +368,7 @@ window.onload = function() {
                     
                     // Draw the tile using the color
                     drawTile(coord.tilex, coord.tiley, col[0], col[1], col[2]);
+                    
                 }
                 
                 // Draw the selected tile
@@ -432,6 +425,7 @@ window.onload = function() {
     function drawTile(x, y, r, g, b) {
         context.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
         context.fillRect(x + 2, y + 2, level.tilewidth - 4, level.tileheight - 4);
+        
     }
     
     // Render clusters
